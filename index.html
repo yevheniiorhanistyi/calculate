@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/icon-calc.png">
+    <title>Kalkulator</title>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="tab-wrapper">
+                <div class="tab__item">
+                    <h1 class="section__title">Kalkulator porcji</h1>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="search">
+                    <div class="search__item">
+                        <h2 class="search__title">Wpisz numer receptury</h2>
+                        <div class="search-group">
+                            <input class="search-group__input" type="number" placeholder="10312048">
+                            <button class="btn search-group__btn">Szukaj</button>
+                        </div>
+
+                    </div>
+                    <div class="col-left__item">
+                        <div class="create">
+                            <label class="create__label" for="create__rec">Wpisz ręcznie</label>
+                            <input class="create__input" type="checkbox" id="create__rec">
+                        </div>
+                        <div class="persent">
+                            <div class="persent-wrapper">
+                                <div class="persent__item">
+                                    <label class="persent__label" for="BB140">MATERIAŁ BB1/BB2 ( stacja
+                                        140/150
+                                        )</label>
+                                    <label class="persent__label" for="BB170">MATERIAŁ BB3 ( stacja 170 )</label>
+                                    <label class="persent__label" for="BB160">MATERIAŁ BB4 ( stacja 160 )</label>
+                                </div>
+                                <div class="persent__item">
+                                    <input class="persent__input" data-check="check-1" type="number" id="BB140"
+                                        placeholder="54.8">
+                                    <input class="persent__input" data-check="check-2" type="number" id="BB170"
+                                        placeholder="28">
+                                    <input class="persent__input" data-check="check-3" type="number" id="BB160"
+                                        placeholder="17.2">
+                                </div>
+                                <div class="persent__item">
+                                    <p class="percent__symbol">%</p>
+                                    <p class="percent__symbol">%</p>
+                                    <p class="percent__symbol">%</p>
+                                </div>
+                                <div class="persent__item">
+                                    <img class="chek-icon" id="check-1" style="width: 24px; height:24px"
+                                        src="img/check-tick-icon-14146.png" alt="">
+                                    <img class="chek-icon" id="check-2" style="width: 24px; height:24px"
+                                        src="img/check-tick-icon-14146.png" alt="">
+                                    <img class="chek-icon" id="check-3" style="width: 24px; height:24px"
+                                        src="img/check-tick-icon-14146.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="calc-group">
+                                <span></span>
+                                <button class="btn btn--persent">Zapisz</button>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-left__item">
+                        <div class="rec">
+                            <div class="rec-wrapper">
+                                <div class="rec-wrapper__item">
+                                    <h3 class="rec__title">Wielkość mieszałki</h3>
+                                    <input class="rec__input" disabled placeholder="270 - 450 kg" type="number">
+                                </div>
+                                <div class="rec-wrapper__item">
+                                    <h3 class="rec__title">Receptura</h3>
+                                    <input class="rec__input table-out" id="actualRec" disabled placeholder="#"
+                                        type="number">
+                                </div>
+                            </div>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Parametr</th>
+                                        <th>Min.wielkość skł. pod stan</th>
+                                        <th>Max.wielkość skł. pod stan</th>
+                                        <th class="dn">Jednostka</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>MATERIAŁ BB1/BB2 ( stacja 140/150 )</td>
+                                        <td class="table-out" id="minBB140"></td>
+                                        <td class="table-out" id="maxBB140"></td>
+                                        <td class="dn">kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MATERIAŁ BB3 ( stacja 170 )</td>
+                                        <td class="table-out" id="minBB170"></td>
+                                        <td class="table-out" id="maxBB170"></td>
+                                        <td class="dn">kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MATERIAŁ BB4 ( stacja 160 )</td>
+                                        <td class="table-out" id="minBB160"></td>
+                                        <td class="table-out" id="maxBB160"></td>
+                                        <td class="dn">kg</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="calculate">
+                    <h2 class="title calculate-title">Produkcja pod stan</h2>
+                    <div class="check">
+                        <div class="check__item">
+                            <label class="check__label" for="radio-BB140">BB 140/150</label>
+                            <input class="check__radio" data-value="BB140" type="radio" id="radio-BB140" disabled>
+                        </div>
+                        <div class="check__item">
+                            <label class="check__label" for="radio-BB170">BB 170</label>
+                            <input class="check__radio" data-value="BB170" type="radio" id="radio-BB170" disabled>
+                        </div>
+                        <div class="check__item">
+                            <label class="check__label" for="radio-BB160">BB 160</label>
+                            <input class="check__radio" data-value="BB160" type="radio" id="radio-BB160" disabled>
+                        </div>
+
+                    </div>
+
+                    <div class="score">
+                        <div class="score__wrapper">
+                            <div class="score__inner">
+                                <h3 class="score__title">Podaj ilość surowca</h3>
+                                <input class="score__input" type="number" placeholder="8240">
+                                <button class="btn score__btn">Zapisz</button>
+                            </div>
+                            <div class="choose">
+                                <h3 class="score__title score__title--grey">Grammatura</h3>
+                                <select class="check-select" name="name" disabled>
+                                    <option value="400">400G</option>
+                                    <option value="700">700G</option>
+                                    <option value="800">800G</option>
+                                    <option value="900">900G</option>
+                                </select>
+                            </div>
+                        </div>
+                        <h3 class="score__title">Actualna ilość <span class=" actual-score">0</span></h3>
+                    </div>
+
+                    <div class="calc-group">
+                        <span></span>
+                        <button class="btn calc-btn" disabled>Oblicz</button>
+                        <span></span>
+                    </div>
+                    <div class="result">
+                        <h3 class="resuslt__title">Ilość porcji po 410 kg = <span class="basic-portions"></span></h3>
+                        <h3 class="resuslt__title">Ilość dodatkowych porcji po <span class="portions-value"></span> =
+                            <span class="portions-count"></span>
+                        </h3>
+                        <h3 class="resuslt__title">Ogólna ilość porcji = <span class="all-portions"></span></h3>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="js/app.min.js"></script>
+</body>
+
+</html>
