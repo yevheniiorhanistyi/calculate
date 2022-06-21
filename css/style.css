@@ -789,6 +789,7 @@ table td {
           align-items: center;
   width: 70%;
   height: 30px;
+  position: relative;
 }
 .score__input {
   width: 40%;
@@ -808,6 +809,19 @@ table td {
 .score__btn {
   padding: 5px 15px;
   border-radius: 0 5px 5px 0;
+}
+
+.error-message {
+  font-size: 16px;
+  font-weight: 500;
+  color: red;
+  position: absolute;
+  top: -40px;
+  left: calc(50% - 70px);
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
 }
 
 .actual-score {
@@ -846,6 +860,7 @@ table td {
 
 .resuslt__title {
   display: none;
+  margin-bottom: 20px;
 }
 
 .show {
