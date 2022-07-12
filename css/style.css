@@ -423,6 +423,29 @@ body {
   background: #001c80;
 }
 
+.btn--clear {
+  font-weight: 700;
+  font-size: 16px;
+  color: #2C2B2B;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border-color: transparent;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  -o-transition: transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+.btn--clear:hover {
+  background: 0;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;

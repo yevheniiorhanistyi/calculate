@@ -16,6 +16,7 @@
             <div class="tab-wrapper">
                 <div class="tab__item">
                     <h1 class="section__title">Kalkulator porcji</h1>
+                    <button class="btn btn--clear">X</button>
                 </div>
             </div>
 
@@ -130,12 +131,12 @@
                             <div class="score__inner">
                                 <h3 class="score__title">Podaj ilość surowca</h3>
                                 <p class="error-message">Zbyt mała ilość !</p>
-                                <input min="0" class="score__input" type="number" placeholder="8240">
+                                <input min="0" class="score__input" type="number" placeholder="8240" id="scoreInput">
                                 <button class="btn score__btn">Zapisz</button>
                             </div>
                             <div class="choose">
                                 <h3 class="score__title">Grammatura</h3>
-                                <select class="check-select" name="name">
+                                <select class="check-select" name="name" id="select">
                                     <option value="0.4">400G</option>
                                     <option value="0.7">700G</option>
                                     <option value="0.8">800G</option>
@@ -143,7 +144,8 @@
                                 </select>
                             </div>
                         </div>
-                        <h3 class="score__title">Actualna ilość <span class=" actual-score">0</span></h3>
+                        <h3 class="score__title">Actualna ilość <span class=" actual-score" id="actualScore">0</span>
+                        </h3>
                     </div>
 
                     <div class="calc-group">
