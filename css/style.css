@@ -409,8 +409,8 @@ body {
 }
 
 .btn {
-  background: #002199;
-  border: 1px solid #002199;
+  background: #1c68d9;
+  border: 1px solid #1c68d9;
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
@@ -420,14 +420,14 @@ body {
 }
 
 .btn:hover {
-  background: #001c80;
+  background: #195dc2;
 }
 
 .btn--clear {
   font-weight: 700;
   font-size: 16px;
   color: #2C2B2B;
-  padding: 10px;
+  padding: 14px;
   position: absolute;
   top: 0;
   right: 0;
@@ -441,9 +441,15 @@ body {
 }
 .btn--clear:hover {
   background: 0;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.icon-clear {
+  display: block;
+  width: 22px;
+  height: auto;
 }
 
 input::-webkit-outer-spin-button,
@@ -481,8 +487,8 @@ input::placeholder {
   color: #b4b1b1;
 }
 
-/*=== Search ===*/
-.search {
+/*=== Create ===*/
+.create-block {
   width: 100%;
   padding: 5px 15px 10px;
 }
@@ -580,7 +586,7 @@ input::placeholder {
 
 .persent__input:focus {
   outline: 0;
-  border: 1px solid #002199;
+  border: 1px solid #1c68d9;
 }
 
 .percent__symbol {
@@ -759,7 +765,7 @@ table td {
 }
 
 .check-select:focus {
-  border: 1px solid #002199;
+  border: 1px solid #1c68d9;
   outline: 0;
 }
 
@@ -830,7 +836,7 @@ table td {
 }
 .score__input:focus {
   outline: 0;
-  border: 1px solid #002199;
+  border: 1px solid #1c68d9;
   border-right: 0;
 }
 .score__btn {

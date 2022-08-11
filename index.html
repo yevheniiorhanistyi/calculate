@@ -16,96 +16,94 @@
             <div class="tab-wrapper">
                 <div class="tab__item">
                     <h1 class="section__title">Kalkulator porcji</h1>
-                    <button class="btn btn--clear">X</button>
+                    <button class="btn btn--clear">
+                        <picture><source srcset="img/trash-icon1.webp" type="image/webp"><img class="icon-clear" src="img/trash-icon1.png" alt=""></picture>
+                    </button>
                 </div>
             </div>
 
             <div class="content">
-                <div class="search">
-                    <div class="col-left__item">
-                        <div class="persent">
-                            <div class="persent-wrapper">
-                                <div class="persent__item">
-                                    <label class="persent__label" for="BB140">MATERIAŁ BB1/BB2 ( stacja
-                                        140/150
-                                        )</label>
-                                    <label class="persent__label" for="BB170">MATERIAŁ BB3 ( stacja 170 )</label>
-                                    <label class="persent__label" for="BB160">MATERIAŁ BB4 ( stacja 160 )</label>
-                                </div>
-                                <div class="persent__item">
-                                    <input min="0" max="100" class="persent__input" data-check="check-1" type="number"
-                                        id="BB140" placeholder="54.8"
-                                        onkeydown="return event.keyCode !== 187 && event.keyCode !== 189 && event.keyCode !== 69">
-                                    <input min="0" max="100" class="persent__input" data-check="check-2" type="number"
-                                        id="BB170" placeholder="28"
-                                        onkeydown="return event.keyCode !== 187 && event.keyCode !== 189 && event.keyCode !== 69">
-                                    <input min="0" max="100" class="persent__input" data-check="check-3" type="number"
-                                        id="BB160" placeholder="17.2"
-                                        onkeydown="return event.keyCode !== 187 && event.keyCode !== 189 && event.keyCode !== 69">
-                                </div>
-                                <div class="persent__item">
-                                    <p class="percent__symbol">%</p>
-                                    <p class="percent__symbol">%</p>
-                                    <p class="percent__symbol">%</p>
-                                </div>
-                                <div class="persent__item">
-                                    <img class="check-icon" id="check-1" style="width: 24px; height:24px"
-                                        src="img/check-tick-icon-14146.png" alt="">
-                                    <img class="check-icon" id="check-2" style="width: 24px; height:24px"
-                                        src="img/check-tick-icon-14146.png" alt="">
-                                    <img class="check-icon" id="check-3" style="width: 24px; height:24px"
-                                        src="img/check-tick-icon-14146.png" alt="">
-                                </div>
+                <div class="create-block">
+                    <div class="persent">
+                        <div class="persent-wrapper">
+                            <div class="persent__item">
+                                <label class="persent__label" for="BB140">MATERIAŁ BB1/BB2 ( stacja
+                                    140/150
+                                    )</label>
+                                <label class="persent__label" for="BB170">MATERIAŁ BB3 ( stacja 170 )</label>
+                                <label class="persent__label" for="BB160">MATERIAŁ BB4 ( stacja 160 )</label>
                             </div>
+                            <div class="persent__item">
+                                <input min="0" max="100" class="persent__input" data-check="check-1" type="number"
+                                    id="BB140" placeholder="54.8"
+                                    onkeydown="return event.keyCode !== 187 && event.keyCode !== 189 && event.keyCode !== 69">
+                                <input min="0" max="100" class="persent__input" data-check="check-2" type="number"
+                                    id="BB170" placeholder="28"
+                                    onkeydown="return event.keyCode !== 187 && event.keyCode !== 189 && event.keyCode !== 69">
+                                <input min="0" max="100" class="persent__input" data-check="check-3" type="number"
+                                    id="BB160" placeholder="17.2"
+                                    onkeydown="return event.keyCode !== 187 && event.keyCode !== 189 && event.keyCode !== 69">
+                            </div>
+                            <div class="persent__item">
+                                <p class="percent__symbol">%</p>
+                                <p class="percent__symbol">%</p>
+                                <p class="percent__symbol">%</p>
+                            </div>
+                            <div class="persent__item">
+                                <img class="check-icon" id="check-1" style="width: 24px; height:24px"
+                                    src="img/check-tick-icon-14146.png" alt="">
+                                <img class="check-icon" id="check-2" style="width: 24px; height:24px"
+                                    src="img/check-tick-icon-14146.png" alt="">
+                                <img class="check-icon" id="check-3" style="width: 24px; height:24px"
+                                    src="img/check-tick-icon-14146.png" alt="">
+                            </div>
+                        </div>
 
-                            <div class="calc-group">
-                                <span></span>
-                                <button class="btn btn--persent">Zapisz</button>
-                                <span></span>
-                            </div>
+                        <div class="calc-group">
+                            <span></span>
+                            <button class="btn btn--persent">Zapisz</button>
+                            <span></span>
                         </div>
                     </div>
 
-                    <div class="col-left__item">
-                        <div class="rec">
-                            <div class="rec-wrapper">
-                                <div class="rec-wrapper__item">
-                                    <h3 class="rec__title">Wielkość mieszałki</h3>
-                                    <input class="rec__input" disabled placeholder="270 - 450 kg" type="number">
-                                </div>
+                    <div class="rec">
+                        <div class="rec-wrapper">
+                            <div class="rec-wrapper__item">
+                                <h3 class="rec__title">Wielkość mieszałki</h3>
+                                <input class="rec__input" disabled placeholder="270 - 450 kg" type="number">
                             </div>
-
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Parametr</th>
-                                        <th>Min.wielkość skł. pod stan</th>
-                                        <th>Max.wielkość skł. pod stan</th>
-                                        <th class="dn">Jednostka</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>MATERIAŁ BB1/BB2 ( stacja 140/150 )</td>
-                                        <td class="table-out" id="minBB140"></td>
-                                        <td class="table-out" id="maxBB140"></td>
-                                        <td class="dn">kg</td>
-                                    </tr>
-                                    <tr>
-                                        <td>MATERIAŁ BB3 ( stacja 170 )</td>
-                                        <td class="table-out" id="minBB170"></td>
-                                        <td class="table-out" id="maxBB170"></td>
-                                        <td class="dn">kg</td>
-                                    </tr>
-                                    <tr>
-                                        <td>MATERIAŁ BB4 ( stacja 160 )</td>
-                                        <td class="table-out" id="minBB160"></td>
-                                        <td class="table-out" id="maxBB160"></td>
-                                        <td class="dn">kg</td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Parametr</th>
+                                    <th>Min.wielkość skł. pod stan</th>
+                                    <th>Max.wielkość skł. pod stan</th>
+                                    <th class="dn">Jednostka</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MATERIAŁ BB1/BB2 ( stacja 140/150 )</td>
+                                    <td class="table-out" id="minBB140"></td>
+                                    <td class="table-out" id="maxBB140"></td>
+                                    <td class="dn">kg</td>
+                                </tr>
+                                <tr>
+                                    <td>MATERIAŁ BB3 ( stacja 170 )</td>
+                                    <td class="table-out" id="minBB170"></td>
+                                    <td class="table-out" id="maxBB170"></td>
+                                    <td class="dn">kg</td>
+                                </tr>
+                                <tr>
+                                    <td>MATERIAŁ BB4 ( stacja 160 )</td>
+                                    <td class="table-out" id="minBB160"></td>
+                                    <td class="table-out" id="maxBB160"></td>
+                                    <td class="dn">kg</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="calculate">
