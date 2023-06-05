@@ -753,7 +753,8 @@ table td {
 .check__item,
 .check__label,
 .check__radio,
-.check-select:hover {
+.check-select:hover,
+.select-mixer:hover {
   cursor: pointer;
 }
 
@@ -771,10 +772,12 @@ table td {
   padding: 10px;
 }
 
-.check-select {
+.check-select 
+.select-mixer {
   padding: 0 5px;
 }
 
+.select-mixer:focus,
 .check-select:focus {
   border: 1px solid #1c68d9;
   outline: 0;
@@ -816,8 +819,9 @@ table td {
   margin-bottom: 25px;
 }
 
-.score .score__wrapper .choose {
-  width: 20%;
+.select-wrapper {
+  width: 100%;
+  max-width: 310px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -827,6 +831,10 @@ table td {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.basis-weight {
+  max-width: 187px;
 }
 
 .score .score__inner {

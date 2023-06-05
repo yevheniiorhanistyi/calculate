@@ -132,18 +132,29 @@
                                 <input min="0" class="score__input" type="number" placeholder="8240" id="scoreInput">
                                 <button class="btn score__btn">Zapisz</button>
                             </div>
-                            <div class="choose">
+                            <div class="select-wrapper basis-weight">
                                 <h3 class="score__title">Grammatura</h3>
-                                <select class="check-select" name="name" id="select">
-                                    <option value="0.4">400G</option>
-                                    <option value="0.7">700G</option>
-                                    <option value="0.8">800G</option>
-                                    <option value="0.9">900G</option>
+                                <select class="check-select" name="Basis weight" id="select">
+                                    <option value="0.4">400 G</option>
+                                    <option value="0.7">700 G</option>
+                                    <option value="0.8">800 G</option>
+                                    <option value="0.9">900 G</option>
                                 </select>
                             </div>
                         </div>
-                        <h3 class="score__title">Actualna ilość <span class=" actual-score" id="actualScore">0</span>
-                        </h3>
+                        <div class="score__wrapper">
+                            <h3 class="score__title">Actualna ilość <span class=" actual-score" id="actualScore">0</span></h3>
+                            <div class="select-wrapper">
+                                <h3 class="score__title">Podstawowa wielkość mieszałki</h3>
+                                <select class="select-mixer" name="Basic size of mixer" id="select">
+                                    <option value="400">400 KG</option>
+                                    <option selected value="410">410 KG</option>
+                                    <option value="420">420 KG</option>
+                                    <option value="430">430 KG</option>
+                                    <option value="440">440 KG</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="calc-group">
@@ -152,7 +163,7 @@
                         <span></span>
                     </div>
                     <div class="result">
-                        <h3 class="result__title optionally">Ilość porcji po 410 kg = <span
+                        <h3 class="result__title optionally">Ilość porcji po <span class="basic-portions__label"></span> = <span
                                 class="basic-portions"></span></h3>
 
                         <h3 class="result__title">Ilość porcji po <span class="portions-value"></span> =

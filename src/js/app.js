@@ -8,7 +8,13 @@ window.addEventListener('DOMContentLoaded', () => {
     scoreBtn = document.querySelector('.score__btn'),
     scoreInput = document.querySelector('.score__input'),
     actualScore = document.querySelector('.actual-score'),
+    basicMixerSize = document.querySelector('.select-mixer'),
+    basicMixerSizeValue = +document.querySelector('.select-mixer').value,
     countComponent = 0;
+
+  basicMixerSize.addEventListener('change', (e) => {
+    basicMixerSizeValue = Number(e.target.value);
+  });
 
   savePerValues.addEventListener('click', saveValues);
 
@@ -117,7 +123,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
       if (item.checked == true) {
         let currentCheck = item.getAttribute('data-value'),
-          basicValue = (410 * dataBase[currentCheck] / 100),
+          basicValue = (basicMixerSizeValue * dataBase[currentCheck] / 100),
           min = dataBase[`min${currentCheck}`],
           max = dataBase[`max${currentCheck}`],
 
@@ -136,7 +142,7 @@ window.addEventListener('DOMContentLoaded', () => {
       selectValue = select.value;
 
     if (countComponent >= min && countComponent < max) {
-      let newPortions = Math.floor((countComponent * 410) / basicValue),
+      let newPortions = Math.floor((countComponent * basicMixerSizeValue) / basicValue),
         cans = Math.ceil(newPortions / selectValue);
       showResult(i, 0, newPortions, i, 0, cans);
     }
@@ -152,7 +158,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     else if (countComponent >= max && (countComponent / min) >= 2 && basicPortions < 2) {
       let newRest = countComponent / 2,
-        newPortions = Math.ceil((newRest * 410) / basicValue),
+        newPortions = Math.ceil((newRest * basicMixerSizeValue) / basicValue),
         cans = Math.ceil(newPortions / selectValue) * 2;
 
       showResult(2, 0, newPortions, 2, 0, cans);
@@ -176,10 +182,10 @@ window.addEventListener('DOMContentLoaded', () => {
       }
 
       let newRest = rest / i,
-        newPortions = Math.floor((newRest * 410) / basicValue),
+        newPortions = Math.floor((newRest * basicMixerSizeValue) / basicValue),
         basicResult = basicPortions + i;
 
-      let basicCansCaunt = Math.ceil((410 / selectValue) * basicPortions),
+      let basicCansCaunt = Math.ceil((basicMixerSizeValue / selectValue) * basicPortions),
         newCansCaunt = Math.ceil((newPortions / selectValue) * i),
         allCans = basicCansCaunt + newCansCaunt;
 
@@ -189,6 +195,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   function showResult(basicResult, basicPortions, portionsValue, portionsCount, restCount, cans) {
 
+    document.querySelector('.basic-portions__label').innerHTML = `${basicMixerSizeValue} kg`;
     document.querySelector('.basic-result').innerHTML = `${basicResult} szt.`;
     document.querySelector('.basic-portions').innerHTML = `${basicPortions} szt.`;
     document.querySelector('.portions-value').innerHTML = `${portionsValue} kg`;
