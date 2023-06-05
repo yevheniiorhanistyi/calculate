@@ -363,11 +363,10 @@ body {
 
 .container {
   max-width: 900px;
-  padding: 60px 23px 20px;
+  padding: 50px 23px 10px;
   margin: 0 auto;
   background-color: #fff;
-  border: 1px solid #ccc;
-  -webkit-box-shadow: 0 4px 100px rgba(164, 174, 196, 0.3);
+  -webkit-box-shadow: 0 4px 100px rgba(164, 174, 196, 0.6);
   box-shadow: 0 4px 100px rgba(164, 174, 196, 0.3);
   position: relative;
 }
@@ -386,7 +385,7 @@ body {
 
 .tab__item {
   width: 200px;
-  height: 60px;
+  height: 50px;
   padding: 20px 0;
   background-color: #fff;
   cursor: pointer;
@@ -507,7 +506,6 @@ input::placeholder {
 
 .persent {
   display: block;
-  padding: 10px 0;
 }
 
 .persent-wrapper {
@@ -531,7 +529,8 @@ input::placeholder {
 }
 
 @media (max-width: 760px) {
-  .persent__item:nth-child(3), .persent__item:nth-child(4) {
+  .persent__item:nth-child(3),
+  .persent__item:nth-child(4) {
     display: none;
   }
 }
@@ -884,7 +883,7 @@ table td {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  margin: 0 auto 15px;
+  margin: 0 auto;
 }
 
 .calc-group span {
